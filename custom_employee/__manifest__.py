@@ -3,7 +3,9 @@
     'version': '1.5',
     'depends': ['hr'],
     'data':[
-        'views/custom_employee.xml',
-        'views/relatives.xml'
+        'views/relatives_tab.xml',
+        'views/relatives.xml',
+        'views/certificates.xml',
+        'views/certificate_tab.xml'
     ],
 }
