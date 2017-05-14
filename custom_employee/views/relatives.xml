@@ -10,6 +10,7 @@
                     <field name="age"/>
                     <field name="gender"/>
                     <field name="dateOfBirth"/>
+                    <field name="relative_relationship"/>
                 </tree>
             </field>
         </record>
@@ -23,6 +24,7 @@
                         <field name="name"/>
                         <field name="gender"/>
                         <field name="dateOfBirth"/>
+                        <field name="relative_relationship"/>
                     </group>
                 </form>
 
