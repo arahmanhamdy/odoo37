@@ -1,0 +1,22 @@
+<odoo>
+    <data noupdate="1">
+         <record id="type_1" model='custom_employee.relation_type'>
+            <field name="type">Son</field>
+         </record>
+         <record id="type_2" model='custom_employee.relation_type'>
+            <field name="type">Husband</field>
+         </record>
+         <record id="type_3" model='custom_employee.relation_type'>
+            <field name="type">Father</field>
+         </record>
+         <record id="type_4" model='custom_employee.relation_type'>
+            <field name="type">Daughter</field>
+         </record>
+         <record id="type_5" model='custom_employee.relation_type'>
+            <field name="type">Wife</field>
+         </record>
+         <record id="type_6" model='custom_employee.relation_type'>
+            <field name="type">Mother</field>
+         </record>
+    </data>
+</odoo>

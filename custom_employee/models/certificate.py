@@ -1,5 +1,5 @@
-from odoo import models, fields ,api
-import datetime
+from odoo import models, fields
+
 
 
 class Certificates(models.Model):

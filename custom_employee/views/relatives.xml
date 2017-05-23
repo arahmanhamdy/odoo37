@@ -7,10 +7,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="type_id" string="Type"/>
                     <field name="age"/>
                     <field name="gender"/>
                     <field name="dateOfBirth"/>
-                    <field name="relative_relationship"/>
+
                 </tree>
             </field>
         </record>
@@ -23,8 +24,9 @@
                     <group>
                         <field name="name"/>
                         <field name="gender"/>
+                        <field name="type_id" widget="selection" string="Type"/>
                         <field name="dateOfBirth"/>
-                        <field name="relative_relationship"/>
+
                     </group>
                 </form>
 

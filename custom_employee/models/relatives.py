@@ -1,14 +1,15 @@
-from odoo import models, fields ,api
+from odoo import models, fields, api
 import datetime
 
 
 class Relatives(models.Model):
     _name = 'custom_employee.relatives'
+
     name = fields.Char(string='Name')
     dateOfBirth = fields.Date(string="Date Of Birth")
-    gender = fields.Selection([('m', 'Male'),('f', 'Female')], default='m')
+    gender = fields.Selection([('m', 'Male'), ('f', 'Female')])
     age = fields.Char(compute='calc_age')
-    relative_relationship = fields.Selection([])
+    type_id = fields.Many2one('custom_employee.relation_type')
     employee_id = fields.Many2one('hr.employee')
 
     @api.onchange('dateOfBirth')
@@ -20,15 +21,9 @@ class Relatives(models.Model):
                 age = current_year - birth_year
                 data.age = age
 
-    @api.onchange('gender')
-    def change_relatives(self):
+    @api.onchange("gender")
+    def onchange_gender(self):
+        domain = [('id', 'in', [1, 2, 3])]
         if self.gender == 'm':
-            self.relative_relationship = fields.Selection([('s', 'Son'),
-                                              ('h', 'Husband'),
-                                              ('f','Father')], default='s',
-                                               string='Relative Relationship')
-        elif self.gender == 'f':
-            self.relative_relationship = fields.Selection([('d', 'Daughter'),
-                                                      ('w', 'Wife'),
-                                                      ('m', 'Mother')], default='d',
-                                                     string='Relative Relationship')
+            domain = [('id', 'not in', [1, 2, 3])]
+        return {'domain': {'type_id': domain}}
