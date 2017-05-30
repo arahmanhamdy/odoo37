@@ -7,6 +7,8 @@
         'views/relatives.xml',
         'views/certificates.xml',
         'views/certificate_tab.xml',
-        'data/relation_types.xml'
+        'data/relation_types.xml',
+        'security/phoenix_security.xml',
+        # 'security/ir.model.access.csv',
     ],
 }
