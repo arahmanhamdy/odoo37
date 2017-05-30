@@ -24,7 +24,7 @@
                     <group>
                         <field name="name"/>
                         <field name="gender"/>
-                        <field name="type_id" widget="selection" string="Type"/>
+                        <field name="type_id"  string="Type" />
                         <field name="dateOfBirth"/>
 
                     </group>

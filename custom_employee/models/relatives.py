@@ -23,7 +23,24 @@ class Relatives(models.Model):
 
     @api.onchange("gender")
     def onchange_gender(self):
-        domain = [('id', 'in', [1, 2, 3])]
+        print ('called')
+        domain = []
         if self.gender == 'm':
+            domain = [('id', 'in', [1, 2, 3])]
+            print ("called male")
+        elif self.gender == 'f':
             domain = [('id', 'not in', [1, 2, 3])]
+            print ("called female")
+        return {'domain': {'type_id': domain}}
+
+    @api.depends("type_id")
+    def onchange_type(self):
+        print ("change")
+        domain = []
+        if self.gender == 'm':
+            domain = [('id', 'in', [1, 2, 3])]
+            print ("change to male")
+        elif self.gender == 'f':
+            domain = [('id', 'not in', [1, 2, 3])]
+            print ("change to female")
         return {'domain': {'type_id': domain}}
