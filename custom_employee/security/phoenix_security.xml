@@ -1,7 +1,8 @@
 <odoo>
-    <data>
+    <data noupdate="0">
         <record id="phoenix_security_category" model="ir.module.category">
             <field name="name">Phoenix Group</field>
+            <field name="sequence">2</field>
         </record>
         <record id="phoenix_employee" model="res.groups">
             <field name="name">Employee</field>
