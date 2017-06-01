@@ -9,6 +9,8 @@
         'views/certificate_tab.xml',
         'views/educations.xml',
         'views/education_tab.xml',
-        'data/relation_types.xml'
+        'data/relation_types.xml',
+        'security/phoenix_security.xml',
+        'security/ir.model.access.csv',
     ],
 }
