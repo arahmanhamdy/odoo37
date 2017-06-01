@@ -1,2 +1,1 @@
-from . import custom_employee, relatives, certificate
-from . import relation_type
+from . import custom_employee, relatives, certificate, education, relation_type
