@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="insurance_tree_view" model="ir.ui.view">
+            <field name="name">Insurance Tree View</field>
+            <field name="model">custom_employee.insurances</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="insurance_form_view" model="ir.ui.view">
+            <field name="name">Insurance Form View</field>
+            <field name="model">custom_employee.insurances</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
