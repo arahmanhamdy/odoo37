@@ -1,6 +1,76 @@
 <odoo>
     <data>
 
+        <record id="training_tree_view" model="ir.ui.view">
+            <field name="name">Employees trainings</field>
+            <field name="model">custom_employee.training</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="department_ids"/>
+                    <field name="employee_job_id"/>
+                    <field name="training_provider_id"/>
+                    <field name="status"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record id="training_providers_tree_view" model="ir.ui.view">
+            <field name="name">Trainings providers</field>
+            <field name="model">custom_employee.training_provider</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone_number"/>
+
+                </tree>
+
+            </field>
+        </record>
+
+        <record id="training_providers_form_view" model="ir.ui.view">
+            <field name="name">Trainings providers</field>
+            <field name="model">custom_employee.training_provider</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="address"/>
+                            <field name="phone_number"/>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="training_form_view" model="ir.ui.view">
+            <field name="name">Employees trainings</field>
+            <field name="model">custom_employee.training</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="employee_id"/>
+                            <field name="department_ids"/>
+                            <field name="employee_job_id"/>
+                            <field name="training_provider_id"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="location"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
         <record id="training_action" model="ir.actions.act_window">
             <field name="name">Trainings</field>
             <field name="res_model">custom_employee.training</field>
@@ -16,7 +86,7 @@
         </record>
 
         <menuitem id="training_menu"
-            name="Employee training"
+            name="Employees trainings"
             parent="hr.menu_hr_root"/>
         <menuitem id="training_settings"
             name="Trainings"
