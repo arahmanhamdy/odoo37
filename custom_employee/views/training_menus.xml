@@ -1,15 +1,30 @@
 <odoo>
     <data>
+
+        <record id="training_action" model="ir.actions.act_window">
+            <field name="name">Trainings</field>
+            <field name="res_model">custom_employee.training</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree, form</field>
+        </record>
+
+        <record id="training_provider_action" model="ir.actions.act_window">
+            <field name="name">Training providers</field>
+            <field name="res_model">custom_employee.training_provider</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree, form</field>
+        </record>
+
         <menuitem id="training_menu"
             name="Employee training"
             parent="hr.menu_hr_root"/>
         <menuitem id="training_settings"
             name="Trainings"
             parent="training_menu"
-            action=""/>
+            action="training_action"/>
         <menuitem id="training_providers"
             name="Training providers"
             parent="training_menu"
-            action=""/>
+            action="training_provider_action"/>
     </data>
 </odoo>
