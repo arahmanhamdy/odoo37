@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <menuitem id="training_menu"
+            name="Employee training"
+            parent="hr.menu_hr_root"/>
+        <menuitem id="training_settings"
+            name="Trainings"
+            parent="training_menu"
+            action=""/>
+        <menuitem id="training_providers"
+            name="Training providers"
+            parent="training_menu"
+            action=""/>
+    </data>
+</odoo>
