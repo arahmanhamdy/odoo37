@@ -1,7 +1,7 @@
 {
     'name': 'custom_employee',
     'version': '1.5',
-    'depends': ['hr'],
+    'depends': ['hr', 'fleet'],
     'data':[
         'views/relatives_tab.xml',
         'views/relatives.xml',
@@ -14,5 +14,6 @@
         'security/ir.model.access.csv',
         'views/insurances.xml',
         'views/insurance_position.xml',
+        'views/fleet.xml',
     ],
 }
