@@ -15,5 +15,6 @@
         'views/insurances.xml',
         'views/insurance_position.xml',
         'views/fleet.xml',
+        'views/organization.xml',
     ],
 }
