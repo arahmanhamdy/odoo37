@@ -7,9 +7,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="employee_id"/>
+                    <field name="employee_ids" />
                     <field name="department_ids"/>
-                    <field name="employee_job_id"/>
+                    <!--<field name="employee_job_id"/>-->
                     <field name="training_provider_id"/>
                     <field name="status"/>
                 </tree>
@@ -32,7 +32,7 @@
         </record>
 
         <record id="training_providers_form_view" model="ir.ui.view">
-            <field name="name">Trainings providers</field>
+            <field name="name">Trainings providers form</field>
             <field name="model">custom_employee.training_provider</field>
             <field name="arch" type="xml">
                 <form>
@@ -49,22 +49,28 @@
         </record>
 
         <record id="training_form_view" model="ir.ui.view">
-            <field name="name">Employees trainings</field>
+            <field name="name">Employees trainings form</field>
             <field name="model">custom_employee.training</field>
             <field name="arch" type="xml">
                 <form>
-                    <sheet>
+                     <sheet>
+                        
                         <group>
                             <field name="name"/>
-                            <field name="employee_id"/>
-                            <field name="department_ids"/>
-                            <field name="employee_job_id"/>
+
+
+                            <!--<field name="employee_job_id"/>-->
                             <field name="training_provider_id"/>
                             <field name="start_date"/>
                             <field name="end_date"/>
                             <field name="location"/>
                             <field name="status"/>
                         </group>
+                         <group>
+                             <field name="department_ids"/>
+                             <field name="employee_ids" />
+                         </group>
+
                     </sheet>
                 </form>
 
@@ -75,14 +81,14 @@
             <field name="name">Trainings</field>
             <field name="res_model">custom_employee.training</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree, form</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <record id="training_provider_action" model="ir.actions.act_window">
             <field name="name">Training providers</field>
             <field name="res_model">custom_employee.training_provider</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree, form</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem id="training_menu"
