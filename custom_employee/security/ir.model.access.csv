@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+employee_custom_employee_relatives_access, Phoenix Employee Relatives Access,model_custom_employee_relatives,phoenix_employee,1,0,0,0
+employee_custom_employee_certificates_access, Phoenix Employee Certificates Access,model_custom_employee_certificates,phoenix_employee,1,0,0,0
+manager_custom_employee_relatives_access, Phoenix Manager Relatives Access,model_custom_employee_relatives,phoenix_manager,1,1,1,1
+manager_custom_employee_certificates_access, Phoenix Manager Certificates Access,model_custom_employee_certificates,phoenix_manager,1,1,1,1
+manager_custom_employee_access, Phoenix Manager Custom Employee Access,model_hr_employee,phoenix_manager,1,1,1,1

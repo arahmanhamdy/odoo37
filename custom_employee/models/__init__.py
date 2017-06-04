@@ -1,4 +1,2 @@
-from . import custom_employee, relatives, certificate
-from . import relation_type
-from . import training
-from . import training_provider
+from . import custom_employee, relatives, certificate, education, relation_type, insurance, organization, unit_type, training, training_provider
+
