@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <menuitem id="custom_groups_menu"
+            name="My Groups"
+                 
+                   parent="base.menu_users"
+        action="custom_employee.training_provider_action"/>
+    </data>
+</odoo>
