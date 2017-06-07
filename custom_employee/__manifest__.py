@@ -7,7 +7,7 @@
         'views/relatives.xml',
         'views/certificates.xml',
         'views/certificate_tab.xml',
-
+        'security/rules.xml',
         'views/educations.xml',
         'views/education_tab.xml',
         'data/relation_types.xml',
