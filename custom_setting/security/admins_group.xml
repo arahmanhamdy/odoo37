@@ -7,5 +7,12 @@
             <field name="implied_ids" eval="[(4, ref('base.group_system'))]"/>
         </record>
 
+        <record id="admins_group_employees_rule" model="ir.rule">
+            <field name="name">admins group rule for employees</field>
+            <field name="model_id" ref="hr.model_hr_employee"></field>
+            <field name="groups" eval="[(4, ref('custom_admins_group'))]"></field>
+            <field name="domain_force">[('create_uid','=', user.id)]</field>
+        </record>
+
     </data>
 </odoo>

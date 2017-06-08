@@ -1,9 +1,96 @@
 <odoo>
     <data>
+        <record id="custom_groups_tree_view" model="ir.ui.view">
+            <field name="name">Access group</field>
+            <field name="model">custom_setting.custom_groups</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="comment"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record id="custom_groups_form_view" model="ir.ui.view">
+            <field name="name">Access groups</field>
+            <field name="model">custom_setting.custom_groups</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="regular_emp"/>
+                            </group>
+
+                            <group>
+                                <field name="emp_officer"/>
+                            </group>
+
+                            <group>
+                                <field name="emp_manger"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="payroll_officer"/>
+                            </group>
+
+                            <group>
+                                <field name="payroll_manager"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="fleet_user"/>
+                            </group>
+
+                            <group>
+                                <field name="fleet_manager"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="attendance_officer"/>
+                            </group>
+                            <group>
+                                <field name="attendance_manger"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="leaves_officer"/>
+                            </group>
+
+                            <group>
+                                <field name="leaves_manger"/>
+                            </group>
+                        </group>
+
+
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="custom_groups_action" model="ir.actions.act_window">
+            <field name="name">Access groups</field>
+            <field name="res_model">custom_setting.custom_groups</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem id="custom_groups_menu"
-            name="My Groups"
-                 
-                   parent="base.menu_users"
-        action="custom_employee.training_provider_action"/>
+                  name="My Groups"
+
+                  parent="base.menu_users"
+                  action="custom_groups_action"/>
     </data>
 </odoo>
